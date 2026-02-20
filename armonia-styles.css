@@ -1723,6 +1723,24 @@ html {
 }
 
 /* ========================================
+   SOCIAL MEDIA & CONTACT ICONS
+======================================== */
+.armonia-social-link:hover,
+.armonia-contact-action:hover,
+.armonia-email-option:hover {
+  transform: scale(1.15) translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.armonia-action-whatsapp:hover {
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6) !important;
+}
+
+.armonia-email-option:hover {
+  box-shadow: 0 8px 25px rgba(234, 67, 53, 0.6) !important;
+}
+
+/* ========================================
    ANIMATIONS
 ======================================== */
 @keyframes armonia-fadeInUp {
