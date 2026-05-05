@@ -138,11 +138,13 @@ html {
 
 .armonia-section-title {
   font-family: var(--armonia-font-serif);
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
   font-weight: 700;
   line-height: 1.2;
   color: var(--armonia-black);
   margin-bottom: var(--armonia-spacing-lg);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .armonia-title-center {
@@ -373,16 +375,12 @@ html {
   }
 
   .armonia-hero-badge {
-    font-size: 0.65rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 0.68rem;
+    padding: 0.2rem 0;
     white-space: normal;
-    max-width: 90%;
-  }
-  
-  .armonia-hero-content {
-    margin-top: 140px;
-    padding: var(--armonia-spacing-sm) var(--armonia-spacing-md);
-    padding-top: var(--armonia-spacing-md);
+    max-width: 95%;
+    letter-spacing: 0.18em;
+    text-align: center;
   }
 
   .armonia-hero-title {
@@ -410,16 +408,35 @@ html {
     gap: var(--armonia-spacing-sm);
   }
 
+  .armonia-cta-buttons-row {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--armonia-spacing-sm);
+  }
+
+  .armonia-anniversary-link {
+    font-size: 0.78rem;
+    padding: 0.45rem 0.9rem;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .armonia-support-cta-row {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--armonia-spacing-sm);
+  }
+
   .armonia-cta-button {
     width: auto;
-    max-width: 90%;
+    max-width: 92%;
     font-size: 0.95rem;
     padding: 0.9rem 1.75rem;
   }
 
   .armonia-cta-large {
     width: auto;
-    max-width: 90%;
+    max-width: 92%;
     font-size: 1rem;
     padding: 1rem 1.5rem;
     white-space: normal;
@@ -427,6 +444,151 @@ html {
 
   .armonia-discover-more {
     font-size: 0.75rem;
+  }
+
+  .armonia-impact-carousel {
+    gap: var(--armonia-spacing-md);
+  }
+
+  .armonia-impact-card {
+    flex: 0 0 calc(100% - var(--armonia-spacing-sm));
+    min-width: min(260px, 90vw);
+  }
+
+  .armonia-meaning-grid {
+    gap: var(--armonia-spacing-lg);
+  }
+
+  .armonia-contribution-badge {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--armonia-spacing-md);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .armonia-badge-text {
+    max-width: none;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .armonia-badge-with,
+  .armonia-badge-amount {
+    font-size: 1.75rem;
+  }
+
+  .armonia-meaning-image-container {
+    margin-top: var(--armonia-spacing-lg);
+  }
+
+  .armonia-benefits-content {
+    padding: 0 var(--armonia-spacing-sm);
+    width: 100%;
+  }
+
+  .armonia-benefits-list {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .armonia-benefit-item {
+    padding: var(--armonia-spacing-md);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .armonia-benefit-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .armonia-benefit-text h4 {
+    font-size: 1.1rem;
+  }
+
+  .armonia-benefit-text p {
+    font-size: 0.9rem;
+  }
+
+  .armonia-stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--armonia-spacing-md);
+    padding: 0 var(--armonia-spacing-sm);
+  }
+
+  .armonia-stat-card {
+    padding: var(--armonia-spacing-md);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .armonia-stat-number {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+  }
+
+  .armonia-stat-unit {
+    font-size: 0.9rem;
+  }
+
+  .armonia-stat-label {
+    font-size: 0.85rem;
+    padding: 0 var(--armonia-spacing-xs);
+    overflow-wrap: break-word;
+  }
+
+  .armonia-stat-description {
+    font-size: 0.8rem;
+    padding: 0 var(--armonia-spacing-xs);
+  }
+
+  .armonia-banner-title {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+    padding: 0 var(--armonia-spacing-sm);
+    line-height: 1.4;
+  }
+
+  .armonia-banner-content {
+    padding: 0 var(--armonia-spacing-sm);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .armonia-cta-banner {
+    width: auto;
+    max-width: 92%;
+    font-size: 0.95rem;
+    padding: 0.9rem 1.75rem;
+  }
+
+  .armonia-connect-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--armonia-spacing-md);
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .armonia-connect-link {
+    max-width: calc(50% - var(--armonia-spacing-sm));
+    min-width: 140px;
+    flex: 0 0 auto;
+  }
+
+  .armonia-link-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .armonia-link-description {
+    font-size: 0.85rem;
+    padding: 0 var(--armonia-spacing-sm);
+  }
+
+  .armonia-carousel-prev,
+  .armonia-carousel-next {
+    display: none;
   }
 }
 
@@ -466,17 +628,19 @@ html {
   font-size: clamp(0.7rem, 2vw, 0.8rem);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--armonia-white);
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
-  border-radius: var(--armonia-radius-full);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.28em;
+  color: rgba(255, 255, 255, 0.88);
+  background: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 0.2rem 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
   position: relative;
   z-index: 10;
   white-space: nowrap;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
   animation: armonia-fadeInUp 0.8s ease-out;
   pointer-events: auto;
 }
@@ -492,6 +656,8 @@ html {
   animation: armonia-fadeInUp 0.8s ease-out 0.2s backwards;
   position: relative;
   z-index: 10;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .armonia-title-line {
@@ -558,35 +724,6 @@ html {
     0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Typewriter effect */
-.armonia-typewriter {
-  overflow: hidden;
-  border-right: 3px solid var(--armonia-teal-light);
-  white-space: nowrap;
-  animation: armonia-typing 2.5s steps(20, end) forwards, armonia-blink 0.75s step-end infinite;
-  width: 0;
-  display: inline-block;
-}
-
-@keyframes armonia-typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes armonia-blink {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: var(--armonia-teal-light);
-  }
-}
-
 .armonia-hero-subtitle {
   font-family: var(--armonia-font-serif);
   font-size: clamp(1.25rem, 3vw, 1.75rem);
@@ -613,12 +750,13 @@ html {
 }
 
 .armonia-hero-description {
-  font-size: 1.125rem;
+  font-size: clamp(0.95rem, 2.2vw, 1.125rem);
   color: rgba(255, 255, 255, 0.9);
   max-width: 600px;
   margin: 0 auto var(--armonia-spacing-xl);
   line-height: 1.8;
   animation: armonia-fadeInUp 0.8s ease-out 0.6s backwards;
+  overflow-wrap: break-word;
 }
 
 /* Scroll indicator */
@@ -808,6 +946,67 @@ html {
   justify-content: center;
 }
 
+/* Two-button row in hero CTA wrapper */
+.armonia-cta-buttons-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--armonia-spacing-md);
+  flex-wrap: wrap;
+  animation: armonia-fadeInUp 0.8s ease-out 0.8s backwards;
+}
+
+/* 30th anniversary link */
+.armonia-anniversary-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--armonia-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(240, 152, 25, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(240, 152, 25, 0.5);
+  border-radius: var(--armonia-radius-full);
+  padding: 0.6rem 1.5rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+  animation: armonia-fadeInUp 0.8s ease-out 1s backwards;
+}
+
+.armonia-anniversary-link:hover {
+  background: rgba(240, 152, 25, 0.4);
+  border-color: rgba(240, 152, 25, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(240, 152, 25, 0.3);
+}
+
+/* Secondary large CTA variant */
+.armonia-cta-large-secondary {
+  background: transparent;
+  border: 2px solid var(--armonia-teal-light);
+  color: var(--armonia-teal-dark);
+  box-shadow: none;
+}
+
+.armonia-cta-large-secondary:hover {
+  background: rgba(40, 167, 216, 0.08);
+  box-shadow: 0 4px 16px rgba(40, 167, 216, 0.2);
+}
+
+/* Support section dual CTA row */
+.armonia-support-cta-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--armonia-spacing-md);
+  flex-wrap: wrap;
+}
+
 /* ========================================
    MEANING SECTION
 ======================================== */
@@ -989,7 +1188,7 @@ html {
 
 .armonia-impact-card {
   flex: 0 0 calc(100% - var(--armonia-spacing-lg));
-  min-width: 280px;
+  min-width: min(280px, 85vw);
   max-width: 380px;
   aspect-ratio: 3 / 4;
   position: relative;
@@ -1866,8 +2065,21 @@ html {
     font-size: 0.95rem;
     padding: 0.9rem 1.75rem;
     width: auto;
-    max-width: 90%;
+    max-width: 92%;
     min-height: 48px;
+  }
+
+  .armonia-cta-large {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    width: auto;
+    max-width: 92%;
+    white-space: normal;
+    min-height: 48px;
+  }
+
+  .armonia-discover-more {
+    font-size: 0.75rem;
   }
 
   .armonia-cta-wrapper {
@@ -1876,6 +2088,27 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .armonia-cta-buttons-row {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: var(--armonia-spacing-sm);
+  }
+
+  .armonia-anniversary-link {
+    font-size: 0.78rem;
+    padding: 0.45rem 0.9rem;
+    text-align: center;
+    white-space: normal;
+    max-width: 92%;
+  }
+
+  .armonia-support-cta-row {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--armonia-spacing-sm);
   }
 
   .armonia-meaning-grid {
@@ -1910,8 +2143,12 @@ html {
   }
 
   .armonia-impact-card {
-    flex: 0 0 calc(100% - var(--armonia-spacing-md));
-    min-width: 260px;
+    flex: 0 0 calc(100% - var(--armonia-spacing-sm));
+    min-width: min(260px, 90vw);
+  }
+
+  .armonia-impact-carousel {
+    gap: var(--armonia-spacing-md);
   }
 
   .armonia-benefits-content {
@@ -1966,6 +2203,8 @@ html {
   .armonia-stat-label {
     font-size: 0.85rem;
     padding: 0 var(--armonia-spacing-xs);
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .armonia-stat-description {
@@ -1977,6 +2216,7 @@ html {
     font-size: clamp(1.25rem, 5vw, 1.75rem);
     padding: 0 var(--armonia-spacing-sm);
     line-height: 1.4;
+    overflow-wrap: break-word;
   }
 
   .armonia-banner-content {
@@ -1987,7 +2227,7 @@ html {
 
   .armonia-cta-banner {
     width: auto;
-    max-width: 90%;
+    max-width: 92%;
     font-size: 0.95rem;
     padding: 0.9rem 1.75rem;
   }
@@ -2037,12 +2277,41 @@ html {
     padding: var(--armonia-spacing-2xl) 0;
   }
 
+  .armonia-hero-badge {
+    white-space: normal;
+    text-align: center;
+    max-width: 90%;
+    letter-spacing: 0.2em;
+  }
+
   .armonia-hero-content {
     padding: var(--armonia-spacing-lg);
   }
 
+  .armonia-cta-buttons-row {
+    gap: var(--armonia-spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .armonia-anniversary-link {
+    font-size: 0.82rem;
+    padding: 0.5rem 1.1rem;
+  }
+
+  .armonia-support-cta-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--armonia-spacing-sm);
+  }
+
   .armonia-impact-card {
     flex: 0 0 calc(50% - var(--armonia-spacing-md));
+    min-width: min(260px, 80vw);
+  }
+
+  .armonia-meaning-grid {
+    gap: var(--armonia-spacing-xl);
   }
 
   .armonia-stats-grid {
@@ -2072,8 +2341,18 @@ html {
     max-width: 800px;
   }
 
+  .armonia-meaning-grid {
+    gap: var(--armonia-spacing-xl);
+  }
+
   .armonia-impact-card {
     flex: 0 0 calc(33.333% - var(--armonia-spacing-lg));
+  }
+
+  .armonia-support-cta-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--armonia-spacing-md);
   }
 
   .armonia-stats-grid {
@@ -2103,12 +2382,12 @@ html {
   .armonia-hero {
     background-attachment: scroll;
     min-height: 100vh;
-    min-height: 100dvh; /* Dynamic viewport height for mobile */
+    min-height: 100dvh;
   }
 
   .armonia-hero-content {
     padding: var(--armonia-spacing-md);
-    margin-top: 100px;
+    margin-top: clamp(90px, 14vh, 130px);
     width: 100%;
     box-sizing: border-box;
   }
@@ -2132,6 +2411,25 @@ html {
 
   .armonia-badge-text {
     max-width: none;
+  }
+
+  .armonia-cta-buttons-row {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: var(--armonia-spacing-sm);
+  }
+
+  .armonia-support-cta-row {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--armonia-spacing-sm);
+  }
+
+  .armonia-anniversary-link {
+    white-space: normal;
+    text-align: center;
+    max-width: 92%;
   }
 
   .armonia-carousel-prev,
