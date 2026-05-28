@@ -40,8 +40,8 @@
   --armonia-gradient-card: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
 
   /* Typography */
-  --armonia-font-primary: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
-  --armonia-font-serif: "Roboto Serif", Georgia, serif;
+  --armonia-font-primary: "Nunito", -apple-system, BlinkMacSystemFont, sans-serif;
+  --armonia-font-serif: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Spacing */
   --armonia-spacing-xs: 0.5rem;
@@ -267,64 +267,7 @@ html {
   justify-content: center;
   overflow: hidden;
   width: 100%;
-  background-image: url("public/images/fondo-armonia.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: scroll;
-}
-
-/* Responsive background adjustments for mobile devices */
-@media (max-width: 767px) {
-  .armonia-hero {
-    background-size: cover;
-    background-position: center center;
-    background-attachment: scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-  }
-}
-
-/* Small mobile devices - iPhone, Samsung */
-@media (max-width: 480px) {
-  .armonia-hero {
-    background-size: cover;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-  }
-}
-
-/* iPhone 14 Pro and similar */
-@media only screen 
-  and (min-width: 390px) 
-  and (max-width: 428px) {
-  .armonia-hero {
-    background-size: cover;
-    background-position: center center;
-  }
-}
-
-@media (min-width: 768px) {
-  .armonia-hero {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-  }
-}
-
-.armonia-hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(ellipse at center, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.4) 50%, rgba(15, 23, 42, 0.5) 100%),
-    linear-gradient(180deg, rgba(15, 23, 42, 0.3) 0%, rgba(55, 117, 138, 0.5) 50%, rgba(0, 104, 56, 0.6) 100%);
-  z-index: 1;
+  background: var(--armonia-off-white);
 }
 
 .armonia-logo-container {
@@ -592,67 +535,118 @@ html {
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-  .armonia-hero-content {
-    margin-top: 160px;
-    padding: var(--armonia-spacing-lg);
-  }
+.armonia-hero-split {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--armonia-spacing-xl) var(--armonia-spacing-md);
+  gap: var(--armonia-spacing-2xl);
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  margin-top: 120px;
+}
 
+@media (min-width: 768px) {
+  .armonia-hero-split {
+    flex-direction: row;
+    padding: var(--armonia-spacing-3xl) var(--armonia-spacing-xl);
+    margin-top: 100px;
+  }
+  
+  .armonia-hero-text-side {
+    flex: 1;
+    text-align: left;
+    padding-right: var(--armonia-spacing-xl);
+  }
+  
+  .armonia-hero-images-side {
+    flex: 1;
+  }
+}
+
+.armonia-hero-images-side {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.armonia-hero-image-collage {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1;
+}
+
+.armonia-hero-img {
+  position: absolute;
+  border-radius: var(--armonia-radius-xl);
+  box-shadow: var(--armonia-shadow-lg);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.armonia-hero-img:hover {
+  transform: scale(1.03);
+  z-index: 10;
+}
+
+.armonia-img-main {
+  width: 75%;
+  height: 75%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border: 6px solid var(--armonia-white);
+}
+
+.armonia-img-secondary {
+  width: 65%;
+  height: 65%;
+  bottom: -10%;
+  right: -5%;
+  z-index: 1;
+  border: 6px solid var(--armonia-white);
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
   .armonia-hero-title {
     font-size: clamp(2.25rem, 7vw, 3.5rem);
   }
 }
 
-@media (min-width: 768px) {
-  .armonia-hero-content {
-    margin-top: 180px;
-    padding: var(--armonia-spacing-xl);
-  }
-}
-
-.armonia-hero-content {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  padding: var(--armonia-spacing-md);
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 180px;
-  padding-top: var(--armonia-spacing-lg);
-  box-sizing: border-box;
-}
-
 .armonia-hero-badge {
   display: inline-block;
-  font-size: clamp(0.7rem, 2vw, 0.8rem);
-  font-weight: 600;
+  font-size: clamp(0.75rem, 2vw, 0.85rem);
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.28em;
-  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.2em;
+  color: var(--armonia-teal-light);
   background: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  padding: 0.2rem 0;
-  border-radius: 0;
+  padding: 0;
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: none;
+  margin-bottom: var(--armonia-spacing-xl);
   position: relative;
   z-index: 10;
   white-space: nowrap;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
   animation: armonia-fadeInUp 0.8s ease-out;
   pointer-events: auto;
 }
 
 .armonia-hero-title {
   font-family: var(--armonia-font-serif);
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  font-weight: 800;
-  line-height: 1.1;
-  color: var(--armonia-white);
-  margin-bottom: var(--armonia-spacing-md);
-  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  font-size: clamp(2.5rem, 8vw, 4.8rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--armonia-black);
+  margin-bottom: var(--armonia-spacing-xs);
   animation: armonia-fadeInUp 0.8s ease-out 0.2s backwards;
   position: relative;
   z-index: 10;
@@ -662,16 +656,14 @@ html {
 
 .armonia-title-line {
   display: block;
-  font-weight: 600;
-  font-size: 0.5em;
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.3),
-    0 4px 8px rgba(0, 0, 0, 0.2),
-    0 1px 2px rgba(0, 0, 0, 0.4);
+  font-weight: 900;
+  font-size: 0.52em;
+  color: var(--armonia-gray-dark);
   letter-spacing: 0.05em;
+  margin-bottom: -0.1em;
   position: relative;
   z-index: 10;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .armonia-title-highlight {
@@ -679,79 +671,41 @@ html {
   position: relative;
 }
 
-/* Armonía - azul claro del logo con blanco, efecto 3D */
 .armonia-word {
   display: inline-block;
-  background: linear-gradient(
-    135deg,
-    var(--armonia-white) 0%,
-    var(--armonia-teal-light) 50%,
-    var(--armonia-white) 100%
-  );
+  background: var(--armonia-gradient-teal);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4)) 
-          drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))
-          drop-shadow(0 1px 2px rgba(40, 167, 216, 0.3));
   position: relative;
   z-index: 1;
-  text-shadow: 
-    0 2px 4px rgba(40, 167, 216, 0.2),
-    0 4px 6px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0 4px 8px rgba(40, 167, 216, 0.3));
 }
 
-/* Amigo - gris plomo con azul claro, efecto 3D */
 .amigo-word {
   display: inline-block;
-  background: linear-gradient(
-    135deg,
-    var(--armonia-gray) 0%,
-    var(--armonia-teal-light) 50%,
-    var(--armonia-white) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4)) 
-          drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))
-          drop-shadow(0 1px 2px rgba(148, 163, 184, 0.3));
+  color: var(--armonia-teal-dark);
   position: relative;
   z-index: 1;
   margin-left: 0.2em;
-  text-shadow: 
-    0 2px 4px rgba(148, 163, 184, 0.2),
-    0 4px 6px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0 4px 8px rgba(55, 117, 138, 0.3));
 }
 
 .armonia-hero-subtitle {
   font-family: var(--armonia-font-serif);
   font-size: clamp(1.25rem, 3vw, 1.75rem);
-  font-weight: 600;
-  background: linear-gradient(
-    135deg,
-    var(--armonia-white) 0%,
-    var(--armonia-teal-light) 50%,
-    var(--armonia-white) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: var(--armonia-spacing-md);
+  font-weight: 700;
+  color: var(--armonia-gray-dark);
+  margin-top: var(--armonia-spacing-sm);
+  margin-bottom: var(--armonia-spacing-xs);
   animation: armonia-fadeInUp 0.8s ease-out 0.4s backwards;
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5)) 
-          drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3))
-          drop-shadow(0 2px 4px rgba(40, 167, 216, 0.4));
-  text-shadow: 
-    0 3px 6px rgba(40, 167, 216, 0.3),
-    0 5px 8px rgba(0, 0, 0, 0.4);
   position: relative;
   z-index: 5;
 }
 
 .armonia-hero-description {
   font-size: clamp(0.95rem, 2.2vw, 1.125rem);
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--armonia-gray-dark);
   max-width: 600px;
   margin: 0 auto var(--armonia-spacing-xl);
   line-height: 1.8;
@@ -770,7 +724,7 @@ html {
   flex-direction: column;
   align-items: center;
   gap: var(--armonia-spacing-xs);
-  color: var(--armonia-white);
+  color: var(--armonia-teal-dark);
   opacity: 0.8;
   animation: armonia-bounce 2s infinite;
 }
@@ -2284,9 +2238,7 @@ html {
     letter-spacing: 0.2em;
   }
 
-  .armonia-hero-content {
-    padding: var(--armonia-spacing-lg);
-  }
+
 
   .armonia-cta-buttons-row {
     gap: var(--armonia-spacing-sm);
@@ -2337,9 +2289,7 @@ html {
     padding: 0 var(--armonia-spacing-lg);
   }
 
-  .armonia-hero-content {
-    max-width: 800px;
-  }
+
 
   .armonia-meaning-grid {
     gap: var(--armonia-spacing-xl);
@@ -2372,9 +2322,7 @@ html {
     padding: 0 var(--armonia-spacing-xl);
   }
 
-  .armonia-hero-content {
-    max-width: 900px;
-  }
+
 }
 
 /* Common Mobile Adjustments */
@@ -2385,12 +2333,7 @@ html {
     min-height: 100dvh;
   }
 
-  .armonia-hero-content {
-    padding: var(--armonia-spacing-md);
-    margin-top: clamp(90px, 14vh, 130px);
-    width: 100%;
-    box-sizing: border-box;
-  }
+
 
   .armonia-section-label {
     font-size: 0.7rem;

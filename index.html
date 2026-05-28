@@ -9,10 +9,10 @@
     <!-- CUSTOMIZE: Add your favicon -->
     <link rel="icon" href="public/images/favicon.ico" type="image/x-icon">
     
-    <!-- Google Fonts - Proxima Nova alternative + Roboto Serif -->
+    <!-- Google Fonts - Nunito & Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Styles -->
     <link rel="stylesheet" href="armonia-styles.css">
@@ -24,55 +24,49 @@
          CUSTOMIZE: Change background image at public/images/armonia-hero-bg.jpg
     ======================================== -->
     <section class="armonia-hero">
-        <!-- Background overlay with gradient -->
-        <div class="armonia-hero-overlay"></div>
-
-        <!-- Logo positioned top center -->
-        <!-- CUSTOMIZE: Add your Armonía logo at public/images/logo-armonia-white.png -->
-        <div class="armonia-logo-container">
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <img src="public/images/Armonia2.png" alt="Armonía - Conservación de Aves en Bolivia" class="armonia-logo">
-            </div>
-            <span class="armonia-hero-badge">&#127881; Celebrating 30 Years of Conservation</span>
-        </div>
-        
-        <!-- Hero content -->
-        <div class="armonia-hero-content">
-            <h1 class="armonia-hero-title">
-                <span class="armonia-title-line">Make a Donation to</span>
-                <span class="armonia-title-highlight">
-                    <span class="armonia-word">Armonía</span> <span class="amigo-word">Bolivia</span>
-                </span>
-            </h1>
-            <p class="armonia-hero-subtitle">Protecting Bolivia's Birds, Wildlife &amp; Communities</p>
-            <p class="armonia-hero-description">
-              Thank you for supporting Armonía's work to conserve Bolivia's wildlife and promote sustainable development in rural communities nationwide.
-            </p>
-            <div class="armonia-cta-wrapper">
-                <div class="armonia-cta-buttons-row">
-                    <a href="https://givebutter.com/armonia-general" class="armonia-cta-button armonia-cta-primary" target="_blank" rel="noopener noreferrer">
-                        <span class="armonia-cta-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                            </svg>
-                        </span>
-                        <span>Donate Now</span>
-                    </a>
-                    <a href="https://givebutter.com/armonia-amigo" class="armonia-cta-button armonia-cta-secondary" target="_blank" rel="noopener noreferrer">
-                        <span>Become an Amigo</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </a>
+        <div class="armonia-hero-split">
+            <!-- Left side: Text -->
+            <div class="armonia-hero-text-side">
+                <div class="armonia-logo-container-inline">
+                    <img src="public/images/Armonia2.png" alt="Armonía - Conservación de Aves en Bolivia" class="armonia-logo">
+                    <span class="armonia-hero-badge">Celebrating 30 Years of Conservation</span>
                 </div>
-                <a href="https://givebutter.com/armonia-bolivia-gd" class="armonia-anniversary-link" target="_blank" rel="noopener noreferrer">
-                    &#127881; We're celebrating 30 years! Give us a birthday gift &rarr;
-                </a>
-                <div class="armonia-discover-more">
-                    <span>Discover More</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 5v14M19 12l-7 7-7-7"/>
-                    </svg>
+                
+                <h1 class="armonia-hero-title">
+                    <span class="armonia-title-line">Make a Donation to</span>
+                    <span class="armonia-title-highlight">
+                        <span class="armonia-word">Armonía</span> <span class="amigo-word">Bolivia</span>
+                    </span>
+                </h1>
+                <p class="armonia-hero-subtitle">Protecting Bolivia's Birds, Wildlife &amp; Communities</p>
+                <p class="armonia-hero-description">
+                  Thank you for supporting Armonía's work to conserve Bolivia's wildlife and promote sustainable development in rural communities nationwide.
+                </p>
+                <div class="armonia-cta-wrapper">
+                    <div class="armonia-cta-buttons-row">
+                        <a href="#donate-general" class="armonia-cta-button armonia-cta-primary">
+                            <span class="armonia-cta-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </span>
+                            <span>Donate Now</span>
+                        </a>
+                        <a href="#donate-amigo" class="armonia-cta-button armonia-cta-secondary">
+                            <span>Become an Amigo</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right side: Images -->
+            <div class="armonia-hero-images-side">
+                <div class="armonia-hero-image-collage">
+                    <img src="public/images/p-imagen.jpg" alt="Conservation 1" class="armonia-hero-img armonia-img-main">
+                    <img src="public/images/s-imagen.jpg" alt="Conservation 2" class="armonia-hero-img armonia-img-secondary">
                 </div>
             </div>
         </div>
@@ -115,6 +109,21 @@
     </section>
 
     <!-- ========================================
+         GENERAL DONATION SECTION (IFRAME)
+    ======================================== -->
+    <section class="armonia-section armonia-general-donate-section" id="donate-general">
+        <div class="armonia-container">
+            <span class="armonia-section-label armonia-label-center">Support Our Work</span>
+            <h2 class="armonia-section-title armonia-title-center">
+                Make a <span class="armonia-text-gradient">General Donation</span>
+            </h2>
+            <div class="armonia-iframe-wrapper" style="max-width: 800px; margin: 0 auto;">
+                <iframe src="https://givebutter.com/embed/c/armonia-general" width="100%" height="600" frameborder="0" scrolling="yes" style="border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.1); background: white;"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
          WHAT DOES IT MEAN SECTION
          CUSTOMIZE: Background image at public/images/armonia-forest-bg.jpg
     ======================================== -->
@@ -142,16 +151,9 @@
                     </div>
                 </div>
                 
-                <!-- Right side: Image -->
-                <!-- CUSTOMIZE: Add image at public/images/armonia-birds-collage.jpg -->
-                <div class="armonia-meaning-image-container">
-                    <div class="armonia-image-frame"></div>
-                    <div class="armonia-meaning-image-wrapper armonia-top-image-wrapper">
-                        <img src="public/images/armonia-dise2.png" alt="Armonía design" class="armonia-meaning-image armonia-top-image">
-                    </div>
-                    <div class="armonia-meaning-image-wrapper">
-                        <img src="public/images/img-back-card-armonia.png" alt="Bolivia's beautiful birds" class="armonia-meaning-image">
-                    </div>
+                <!-- Right side: Image -> Givebutter iframe -->
+                <div class="armonia-meaning-iframe-container" id="donate-amigo">
+                    <iframe src="https://givebutter.com/embed/c/armonia-amigo" width="100%" height="600" frameborder="0" scrolling="yes" style="border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 4px 20px rgba(0,0,0,0.1); background: white; margin-top: 2rem;"></iframe>
                 </div>
             </div>
         </div>
@@ -350,7 +352,7 @@
                         </div>
                     </div>
                     
-                    <a href="https://givebutter.com/armonia-amigo" class="armonia-cta-button armonia-cta-secondary" target="_blank" rel="noopener noreferrer">
+                    <a href="#donate-amigo" class="armonia-cta-button armonia-cta-secondary">
                         <span>Become an Amigo</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -411,7 +413,7 @@
                 </div>
                 
                 <div class="armonia-support-cta-row">
-                    <a href="https://givebutter.com/armonia-general" class="armonia-cta-button armonia-cta-large" target="_blank" rel="noopener noreferrer">
+                    <a href="#donate-general" class="armonia-cta-button armonia-cta-large">
                         <span class="armonia-cta-icon">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
@@ -419,7 +421,7 @@
                         </span>
                         <span>Donate Now</span>
                     </a>
-                    <a href="https://givebutter.com/armonia-amigo" class="armonia-cta-button armonia-cta-large armonia-cta-large-secondary" target="_blank" rel="noopener noreferrer">
+                    <a href="#donate-amigo" class="armonia-cta-button armonia-cta-large armonia-cta-large-secondary">
                         <span>Start Your Monthly Gift</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -492,7 +494,7 @@
                 <h2 class="armonia-banner-title">
                     Help <span class="armonia-text-gradient">protect</span> Bolivia's <span class="armonia-text-gradient">extraordinary</span> wildlife and <span class="armonia-text-gradient">empower</span> the <span class="armonia-text-gradient">communities</span> that live alongside it
                 </h2>
-                <a href="https://givebutter.com/armonia-general" class="armonia-cta-button armonia-cta-banner" target="_blank" rel="noopener noreferrer">
+                <a href="#donate-general" class="armonia-cta-button armonia-cta-banner">
                     <span>Donate Now</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
